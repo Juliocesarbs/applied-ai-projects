@@ -8,15 +8,24 @@ O objetivo é explorar diferentes abordagens, arquiteturas e técnicas através 
 
 ### ajudAI
 
-POC de um assistente baseado em agentes especializados para atendimento de solicitações em um contexto financeiro fictício.
+POC de um assistente financeiro com múltiplos agentes.
 
-Conceitos explorados:
+O projeto explora:
 
-- AI Agents
-- Routing
-- Tool Calling
-- Natural Language Understanding
-- LLMs
-- Model Evaluation
+- LangGraph para orquestração
+- Qwen3 4B executado localmente com Ollama
+- agentes especializados
+- tools com dados sintéticos
+- comparação entre roteamento por regras e LLM
+- avaliação de qualidade e latência
 
-Status: Em desenvolvimento.
+**Resultado do experimento de roteamento:**
+
+| Abordagem | Accuracy | Macro F1 |
+|---|---:|---:|
+| Rules Router | 72,5% | 73,5% |
+| Qwen3 4B | 97,5% | 97,5% |
+
+Os resultados foram obtidos em um conjunto de teste sintético com 40 mensagens.
+
+[Ver projeto ajudAI](./ajudAI)
