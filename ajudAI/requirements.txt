@@ -10,6 +10,7 @@ httpx==0.28.1
 httpx2==2.13.0
 idna==3.20
 iniconfig==2.3.0
+jiter==0.17.0
 jsonpatch==1.33
 jsonpointer==3.1.1
 langchain-core==1.6.3
@@ -19,6 +20,7 @@ langgraph-checkpoint==4.2.0
 langgraph-prebuilt==1.1.0
 langgraph-sdk==0.4.4
 langsmith==0.13.0
+ollama==0.6.2
 orjson==3.12.0
 ormsgpack==1.12.2
 packaging==26.3

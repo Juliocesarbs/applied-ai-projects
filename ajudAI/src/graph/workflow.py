@@ -5,7 +5,7 @@ from langgraph.graph import END, START, StateGraph
 from src.agents.account_agent import handle_account_request
 from src.agents.card_agent import handle_card_request
 from src.agents.pix_agent import handle_pix_request
-from src.router.router import route_message
+from src.router.llm_router import route_message_with_llm
 
 
 class AgentState(TypedDict):
@@ -15,7 +15,7 @@ class AgentState(TypedDict):
 
 
 def router_node(state: AgentState) -> dict:
-    route = route_message(state["message"])
+    route = route_message_with_llm(state["message"])
 
     return {"route": route}
 
