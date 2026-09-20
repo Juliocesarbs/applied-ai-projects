@@ -9,23 +9,33 @@ class RouteDecision(BaseModel):
 
 
 SYSTEM_PROMPT = """
-Classifique solicitações de clientes de uma instituição financeira fictícia.
+Você classifica solicitações de clientes de uma instituição financeira fictícia.
 
-Rotas disponíveis:
+Escolha exatamente uma das rotas abaixo.
 
 PIX:
-Transferências via Pix, problemas com Pix e limites Pix.
+Solicitações relacionadas ao envio de dinheiro por Pix ou transferência
+instantânea, incluindo status, falhas, recebimento e limites de envio.
 
 CARD:
-Cartão, fatura, limite ou status do cartão.
+Solicitações relacionadas ao cartão de crédito, incluindo fatura,
+compras no crédito, limite disponível, compras recusadas e status
+do cartão.
 
 ACCOUNT:
-Saldo, extrato ou movimentações da conta.
+Solicitações sobre uma conta já existente, limitadas a saldo,
+extrato, entradas, saídas, transações e movimentações da conta.
 
 OUT_OF_SCOPE:
-Assuntos fora das categorias anteriores.
+Qualquer solicitação fora das definições anteriores.
+Inclui outros produtos ou serviços financeiros, abertura de conta,
+investimentos, poupança, empréstimos, financiamentos, seguros,
+dados cadastrais e atendimento.
 
-Classifique a solicitação sem responder ao cliente.
+Use o contexto completo da mensagem.
+Não classifique apenas pela presença de uma palavra.
+Não responda ao cliente.
+Retorne somente a classificação solicitada.
 """
 
 
@@ -43,6 +53,7 @@ def route_message_with_llm(message: str) -> str:
             },
         ],
         format=RouteDecision.model_json_schema(),
+        think=False,
         options={
             "temperature": 0,
         },
