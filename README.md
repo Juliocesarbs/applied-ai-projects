@@ -1,14 +1,14 @@
 # Applied AI Projects
 
-Repos para projetos e provas de conceito envolvendo Inteligência Artificial, Machine Learning e Generative AI.
+Repositório para projetos e provas de conceito envolvendo Inteligência Artificial, Machine Learning, Data Science e Generative AI.
 
-O objetivo é explorar diferentes abordagens, arquiteturas e técnicas através de implementações práticas e protótipos.
+O objetivo é explorar diferentes abordagens, arquiteturas e técnicas por meio de implementações práticas, experimentos e análises reproduzíveis.
 
 ## Projects
 
 ### ajudAI
 
-POC de um assistente financeiro com múltiplos agentes.
+POC de um assistente financeiro baseado em múltiplos agentes especializados.
 
 O projeto explora:
 
@@ -29,3 +29,35 @@ O projeto explora:
 Os resultados foram obtidos em um conjunto de teste sintético com 40 mensagens.
 
 [Ver projeto ajudAI](./ajudAI)
+
+---
+
+### Eleições 2026 — Análise de Dados
+
+Projeto de análise de dados das candidaturas à Presidência da República nas Eleições 2026 utilizando dados oficiais disponibilizados pelo Tribunal Superior Eleitoral (TSE).
+
+O projeto explora:
+
+- ingestão e processamento de dados públicos
+- construção e validação de datasets analíticos
+- análise exploratória de dados
+- análise de bens declarados ao TSE
+- tratamento de candidaturas deferidas, pendentes, indeferidas e substituídas
+- visualização e comunicação de resultados
+- preparação da base para futuras análises com NLP e LLMs
+
+A análise principal considera candidaturas com situação de julgamento **DEFERIDO** no snapshot dos dados utilizado.
+
+Próximas etapas incluem análise de propostas de governo utilizando técnicas de NLP, embeddings, clustering e LLMs.
+
+[Ver projeto Eleições 2026](./eleicoes-2026-data-analysis)
+
+## Repository Structure
+
+```text
+applied-ai-projects/
+├── ajudAI/
+└── eleicoes-2026-data-analysis/
+```
+
+Cada projeto possui documentação, dependências e estrutura próprias.

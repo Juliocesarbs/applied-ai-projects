@@ -170,8 +170,8 @@ Esses números descrevem exclusivamente o snapshot utilizado e podem mudar confo
 ### 1. Clonar o repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd eleicoes-2026-data-analysis
+git clone https://github.com/Juliocesarbs/applied-ai-projects.git
+cd applied-ai-projects/eleicoes-2026-data-analysis
 ```
 
 ### 2. Criar o ambiente virtual
