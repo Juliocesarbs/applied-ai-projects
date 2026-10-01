@@ -125,4 +125,103 @@ O `Precision@5 = 1.000` se refere somente às oito consultas e aos 40 resultados
 
 ## E o RAG?
 
-Com o retrieval funcionando, utilizei os
+Com o retrieval funcionando, utilizei os chunks recuperados como contexto para um modelo de linguagem.
+
+Comparei dois modelos locais nas mesmas oito consultas:
+
+- Llama 3.2 3B;
+- Gemma 3 4B.
+
+Avaliei quatro critérios separadamente:
+
+| Critério | Llama 3.2 3B | Gemma 3 4B |
+|---|---:|---:|
+| Grounding | 50.0% | 87.5% |
+| Citação das fontes | 0.0% | 100% |
+| Português | 100% | 100% |
+| Sem avaliação/ranking | 100% | 100% |
+
+Esses números representam **taxas de conformidade nos oito casos avaliados manualmente**, e não acurácia geral dos modelos.
+
+![Comparação das avaliações do RAG](outputs/figures/rag_evaluation.png)
+
+### Um resultado que me chamou atenção
+
+**Ter uma citação não garante grounding.**
+
+Em um dos testes, o Gemma citou a fonte utilizada, mas alterou o sentido de uma informação sobre habitação.
+
+Esse caso mostrou na prática por que avaliei **fidelidade ao documento e presença de citações separadamente**. Uma resposta pode apontar para a fonte correta e, ainda assim, não representar corretamente o que está escrito nela.
+
+Para a configuração final do experimento, mantive:
+
+```text
+Chunking: 500 palavras / overlap 75
+Embedding: qwen3-embedding:0.6b
+Retrieval: cosine similarity
+Top-k: 3
+LLM: Gemma 3 4B
+```
+
+## Estrutura do projeto
+
+```text
+eleicoes-2026-data-analysis/
+├── data/
+├── notebooks/
+│   ├── 01_eda_candidatos.ipynb
+│   └── 02_nlp_planos_governo.ipynb
+├── src/
+│   ├── ingestion/
+│   ├── processing/
+│   ├── analysis/
+│   └── visualization/
+├── outputs/
+│   └── figures/
+├── README.md
+└── requirements.txt
+```
+
+Mantive a implementação em `src/` e utilizei os notebooks principalmente para exploração, análise e apresentação dos resultados.
+
+## Como executar
+
+```bash
+git clone https://github.com/Juliocesarbs/applied-ai-projects.git
+cd applied-ai-projects/eleicoes-2026-data-analysis
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+Para embeddings e RAG, utilizei modelos locais com Ollama:
+
+```bash
+ollama pull qwen3-embedding:0.6b
+ollama pull gemma3:4b
+```
+
+Para explorar as análises:
+
+```bash
+jupyter notebook
+```
+
+Os principais notebooks são:
+
+- `01_eda_candidatos.ipynb` — análise dos dados estruturados;
+- `02_nlp_planos_governo.ipynb` — NLP, embeddings, retrieval e RAG.
+
+## Tecnologias
+
+**Python · Pandas · NumPy · Scikit-learn · NLTK · pypdf · Matplotlib · Jupyter · Ollama · Qwen Embeddings · Gemma**
+
+## Limitações
+
+Os dados representam um snapshot da base oficial do TSE e podem sofrer atualizações.
+
+TF-IDF e embeddings representam proximidade textual ou vetorial, não equivalência de propostas ou posicionamentos políticos.
+
+A avaliação de retrieval e RAG também foi realizada sobre um conjunto pequeno de consultas. Os resultados servem para analisar o comportamento deste experimento e não devem ser generalizados para qualquer consulta ou modelo.
