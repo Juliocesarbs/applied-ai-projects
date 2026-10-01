@@ -1,0 +1,95 @@
+QUERY_ID,QUERY,RESPONSE,SOURCES,GROUNDED,CITACAO,PORTUGUES,SEM_AVALIACAO,OBSERVACAO
+educacao,Quais propostas aparecem nos trechos recuperados sobre educação pública?,"CANDIDATO (PARTIDO) [FONTE]
+- HERTZ DIAS (PSTU) [FONTE 1]
+  - Investimento massivo na educação pública. [FONTE 1]
+  - Valorização dos profissionais da educação, com carreira e salários dignos. [FONTE 1]
+  - Ampliação de vagas em creches, escolas e universidades públicas. [FONTE 1]
+  - Garantia de permanência estudantil (transporte, alimentação, bolsas). [FONTE 1]
+  - Produção de conhecimento voltada às necessidades sociais, e não ao mercado. [FONTE 1]
+  - Por uma formação completa, crítica e científica nas escolas públicas. [FONTE 1]
+- SAMARA (UP) [FONTE 2]
+  - Revogação do Novo Ensino Médio e das Reformas Empresariais. [FONTE 2]
+  - Destinação de pelo menos 10% do PIB nacional para a educação pública. [FONTE 2]
+  - Efetivar programa de erradicação do analfabetismo. [FONTE 2]
+  - Recompor os Orçamentos das Universidades e Institutos Federais. [FONTE 2]
+  - Fim da Privatização do Ensino. [FONTE 2]
+- RONALDO CAIADO (PSD) [FONTE 3]
+  - Pacto Nacional pela Alfabetização e Matemática na Idade Certa. [FONTE 3]
+  - Universalizar pré-escola e ampliar creches prioritariamente para famílias vulneráveis. [FONTE 3]
+  - Diagnosticar defasagens por estudante e rede, oferecer material, tempo adicional, tutoria e formação. [FONTE 3]
+  - Recomposição nacional das aprendizagens. [FONTE 3]
+  - Transformação dos anos finais. [FONTE 3]
+  - Ensino médio com sentido e flexibilidade. [FONTE 3]
+  - Professor bem formado, apoiado e valorizado. [FONTE 3]",HERTZ DIAS|PSTU|12 || SAMARA|UP|27 || RONALDO CAIADO|PSD|34,,,,,
+saude,Quais propostas aparecem nos trechos recuperados sobre saúde pública e SUS?,"CANDIDATO (PARTIDO) [FONTE X]
+- Samara (UP): O Sistema Único de Saúde é uma das maiores conquistas sociais do povo brasileiro. O SUS foi criado na Constituição Federal de 1988 e efetivado em 1990. Os desempregados e autônomos precisavam recorrer às filantropias para conseguir atendimento médico. O SUS possibilitou o atendimento universal a toda a população. Mesmo aqueles que pagam seu plano ou seguro de saúde precisam recorrer ao SUS para ter acesso a alguns procedimentos. Ainda assim, os donos dos planos de saúde seguem lucrando enormes quantias. O governo de Dilma Rousseff (PT), em 2011, criou a Empresa Brasileira de Serviços Hospitalares (Ebserh), representando a privatização da maior parte dos hospitais universitários das instituições federais do país. Agora, o processo de privatização da saúde avança para a atenção básica (postos de saúde), com estudos de viabilidade organizados pelo BNDES. Inúmeras empresas privadas denominadas de Organizações Sociais de Saúde (OSS) administram grande parte dos serviços públicos de saúde visando obter lucros à custa da precarização da saúde pública. O total de hospitais privados atingiu 4.466, tornando o Brasil o segundo maior mercado de planos privados de saúde do mundo. Defender o SUS é defender a vida, a ciência e a soberania nacional. Nenhuma pessoa deve ser privada de atendimento por sua renda ou pelo lugar onde vive. A saúde deve estar a serviço do povo, e não do lucro. O Programa de Governo 19 e 20 defendem o fortalecimento e unificação do SUS 100% Estatal: Fim da entrega da gestão hospitalar a Organizações Sociais (OSs), fundações privadas e cooperativas empresariais. T oda a rede sanitária deve ser de gestão direta e pública.  • Fortalecimento e Unificação do SUS 100% Estatal: Fim da entrega da gestão hospitalar a Organizações Sociais (OSs), fundações privadas e cooperativas empresariais. T oda a rede sanitária deve ser de gestão direta e pública. Fim da exploração dos planos de saúde privados. • Soberania Farmacêutica e Produção Nacional de Remédios: Fortalecimento dos laboratórios oficiais do Estado para a fabricação massiva de medicamentos, vacinas, equipamentos e insumos, para serem distribuídos gratuitamente à população. • Valorização dos Trabalhadores da Saúde: Concursos públicos com regime estatutário, fim da precarização e aplicação integral dos pisos salariais nacionais das categorias. [FONTE 1], [FONTE 2], [FONTE 3]",SAMARA|UP|23 || SAMARA|UP|22 || SAMARA|UP|24,,,,,
+seguranca,Quais propostas aparecem nos trechos recuperados sobre segurança pública e combate ao crime?,"**LULA** [FONTE 1]
+- Propõe emenda constitucional para revisar as atribuições dos entes da Federação na área de segurança pública.
+- Amplia a capacidade de enfrentar o crime organizado com a Lei Antifacção.
+- Mantém a estratégia de asfixia financeira do crime organizado.
+- Fortalece o Programa Brasil Contra o Crime Organizado.
+- Propõe o Pacto Nacional de Execução Penal para o Enfrentamento ao Crime Organizado.
+- Aprimora os mecanismos de rastreabilidade de armas e munições.
+- Planeja manter uma política de controle de armas e munições.
+
+**ZEMA** [FONTE 2]
+- Cortar mordomias, respeitar o dinheiro de quem trabalha, resgatar o respeito e o cumprimento das leis.
+- Recuperar territórios dominados pelo crime organizado com operações que envolvam colaboração entre as Forças Armadas, as polícias estaduais e a Polícia Federal.
+- Construir presídios de segurança máxima para confinamento de faccionados.
+- Classificar as facções criminosas como organizações terroristas.
+
+**SAMARA** [FONTE 3]
+- Fortalecer programas de urbanização de favelas, regularização urbanização de favelas, regularização fundiária de interesse social, fundiária de interesse social, saneamento, drenagem, iluminação, saneamento, drenagem, iluminação, equipamentos públicos e mobilidade.
+- Priorizar a política de moradia focada na desapropriação da grande propriedade.
+- Financiar drenagem, contenção de encostas, parques lineares, recuperação de rios, reassentamento de áreas de risco e adaptação climática urbana.
+- A segurança pública é um direito fundamental do povo.",LULA|PT|16 || ZEMA|NOVO|1 || SAMARA|UP|57,,,,,
+trabalho,Quais propostas aparecem nos trechos recuperados sobre emprego e trabalho?,"CANDIDATO (PARTIDO) [FONTE]
+- Samara (UP): Defende a criação de Frentes Emergenciais de Trabalho com empregos públicos com contratações diretas em um grande plano nacional de construção de moradias, saneamento, creches, postos de saúde e infraestrutura nas periferias e no interior. [FONTE 1]
+- Lula (PT): Valoriza o trabalho em todas as formas, assegure direitos às trabalhadoras e trabalhadores, prepare as pessoas para as transformações tecnológicas, fortaleça o empreendedorismo, o cooperativismo e a economia solidária. Retomada do crescimento, do investimento em infraestrutura, da política industrial e oferta de linhas de crédito adequadas. Aumento real do salário mínimo. [FONTE 2]
+- Romeu Zema (NOVO): Remover os obstáculos à geração de empregos formais, reduzir os custos de contratar, qualificar a mão de obra para o mercado de trabalho, ampliar a liberdade de trabalho, garantir aos indígenas o direito de trabalhar e prosperar com o seu trabalho. [FONTE 3]",SAMARA|UP|10 || LULA|PT|50 || ZEMA|NOVO|14,,,,,
+meio_ambiente,Quais propostas aparecem nos trechos recuperados sobre meio ambiente e mudanças climáticas?,"CANDIDATO (PARTIDO) [FONTE]
+- EDMILSON COSTA (PCB): O governo do Poder Popular desenvolverá uma política radical de combate à destruição da natureza promovida pelo capitalismo, com ações emergenciais voltadas à preservação ambiental, como alertas de tempestades e temperaturas elevadas, obrigatoriedade da oferta de água potável e refrigeração, verificação da adequação das condições ambientais de trabalho e promoção da reciclagem de materiais, reuso e remanufatura de produtos. [FONTE 1]
+- SAMARA (UP): Proibição da destruição de florestas, estabelecimento do controle popular sobre a Amazônia e expulsão de monopólios estrangeiros da região; demarcação e posse imediata das terras indígenas e quilombolas; intensificação da exploração da terra aumenta a poluição, o desmatamento e o aquecimento global. [FONTE 2]
+- RONALDO CAIADO (PSD): Mudanças climáticas aumentam secas, enchentes, calor, incêndios e perdas agrícolas; saneamento e resíduos permanecem distantes da universalização; carbono, bioeconomia, produtos florestais, agricultura regenerativa e finanças verdes abrem mercados; implementação integral do Código Florestal; mercado de carbono de alta integridade; pagamento por serviços ambientais em escala; bioeconomia com valor no território; combate integrado ao desmatamento, grilagem e crimes ambientais; prevenção e combate a incêndios. [FONTE 3]",EDMILSON COSTA|PCB|8 || SAMARA|UP|75 || RONALDO CAIADO|PSD|55,,,,,
+moradia,Quais propostas aparecem nos trechos recuperados sobre habitação e moradia?,"CANDIDATO (PARTIDO) [FONTE 1]
+- A proposta inverte a lógica da política habitacional, dando ao cidadão o poder de compra e a escolha do local de moradia.
+- O centro da proposta é a portabilidade do aluguel para financiamento, com acesso automático para quem paga aluguel e comprova capacidade de pagamento.
+- O financiamento habitacional terá parcela inicial equivalente ao valor do aluguel comprovado, dentro do teto de renda e valor de imóvel definidos em regulamento.
+- A análise do financiamento será automatizada com resposta em prazo fixado.
+- A fila de habitação será decidida no balcão, permitindo a escolha do beneficiário do imóvel.
+- O Estado financia; a pessoa decide onde vai viver.
+
+CANDIDATO (PARTIDO) [FONTE 2]
+- Redução do custo de originação por meio da automatização da análise, do cartório eletrônico e da eliminação de exigência documental duplicada.
+- Garantia pública parcial para o financiamento de quem tem histórico de aluguel e não tem entrada, reduzindo o prêmio de risco cobrado pelo banco.
+- Uso do imóvel vazio: incentivo tributário à colocação no mercado de unidade retomada e de estoque parado.
+- A meta declarada é a redução do déficit habitacional medido pela metodologia da Fundação João Pinheiro.
+- O cadastro público de locação será regulamentado.
+- Lei orçamentária para o subsídio.
+
+CANDIDATO (PARTIDO) [FONTE 3]
+- É urgente uma profunda Reforma Urbana que contemple os direitos à moradia, transporte público, educação, saúde, cultura, saneamento e meio ambiente.
+- É preciso um grande enfrentamento com a especulação imobiliária.
+- Ampliar massivamente a produção pública e social de moradias, priorizando famílias de baixa renda, mulheres chefes de família, pessoas com deficiência, idosos e população em situação de rua.
+- Fortalecer programas de urbanização de favelas e regularização fundiária de interesse social.
+- Utilizar imóveis e terrenos da União ociosos ou subutilizados para habitação popular e equipamentos públicos.",VETERINÁRIO WILSON GRASSI|DEMOCRATA|30 || VETERINÁRIO WILSON GRASSI|DEMOCRATA|31 || SAMARA|UP|56,,,,,
+infraestrutura,Quais propostas aparecem nos trechos recuperados sobre infraestrutura e transporte público?,"CANDIDATO (PARTIDO) [FONTE]
+- RONALDO CAIADO (PSD) [FONTE 1]: Ssemafórica, terminais, estações, pontos seguros e informação em tempo real. Renovação de frotas acessíveis e de baixa emissão, criar programa nacional para substituir veículos antigos por ônibus climatizados, acessíveis e de baixa emissão. Infraestrutura de média e alta capacidade retomando investimentos em corredores estruturais, BRT, VLT, trens metropolitanos, metrôs e integração ferroviária. Mobilidade ativa, acessibilidade e primeira e última milha. Segurança viária e redução do trauma. Planejamento urbano orientado ao transporte.
+- ZEMA (NOVO) [FONTE 2]: Mais de 90 milhões de pessoas sem acesso à coleta de esgoto, 32 milhões sem água tratada. Necessidade de 4% ao ano para conservar o que já existe. Dificuldades para atrair investimento privado devido a licenças lentas, burocracia e marcos legais desatualizados.
+- ZEMA (NOVO) [FONTE 3]: Construir o maior portfólio de investimentos em infraestrutura, elaborar um portfólio robusto de projetos, combinar arranjos financeiros, ampliar mecanismos de mitigação de riscos, simplificar o processo de licenciamento, fortalecer a coordenação entre reguladores e órgãos de controle, reunificar o Ministério da Infraestrutura, fortalecer a Agência Nacional de Águas e Saneamento Básico (ANA), ampliar e modernizar a malha ferroviária nacional, expandir a capacidade e aumentar a eficiência do sistema portuário nacional, modernizar a gestão da infraestrutura rodoviária nacional, fortalecer a mobilidade urbana como política nacional de infraestrutura.",RONALDO CAIADO|PSD|61 || ZEMA|NOVO|15 || ZEMA|NOVO|17,,,,,
+mulheres,Quais propostas aparecem nos trechos recuperados sobre políticas para mulheres?,"CANDIDATO (PARTIDO) [FONTE 1]
+- Política para mulheres será organizada em torno de quatro direitos: viver sem violência, cuidar da saúde, trabalhar e empreender com igualdade de oportunidades e participar das decisões.
+- Combate ao feminicídio terá comando nacional, integração entre segurança, justiça, saúde e assistência e proteção econômica para romper ciclos de dependência.
+- Políticas serão avaliadas por resultado e alcançarão mulheres urbanas, rurais, negras, indígenas, idosas, com deficiência e de diferentes regiões.
+- Mulheres e filhos precisam de moradia, renda, cuidado, escola, saúde mental e orientação jurídica para reconstruir a vida.
+
+CANDIDATO (PARTIDO) [FONTE 2]
+- Redução da jornada de trabalho sem redução salarial como medida para enfrentar a dupla jornada e garantir qualidade de vida.
+- PELO DIREITO AO CORPO E À MATERNIDADE LIVRE! Educação sexual para decidir, contraceptivo para não engravidar, aborto legal e seguro para não morrer.
+- Garantia de condições materiais para quem deseja maternar.
+- Fim de toda forma de controle sobre o corpo das mulheres.
+
+CANDIDATO (PARTIDO) [FONTE 3]
+- Fortalecer canais, inspeção, protocolos e responsabilização por assédio e violência, incluindo trabalho doméstico, rural e plataformas.
+- Estender igualdade de acesso, prevenção ao assédio e proteção à maternidade às carreiras públicas civis e militares.
+- Combater violência política de gênero e ataques coordenados, garantir investigação e segurança e fortalecer formação de candidatas e lideranças.",RONALDO CAIADO|PSD|62 || HERTZ DIAS|PSTU|22 || RONALDO CAIADO|PSD|64,,,,,

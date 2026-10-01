@@ -1,0 +1,166 @@
+QUERY_ID,QUERY,RESPONSE,SOURCES,GROUNDED,CITACAO,PORTUGUES,SEM_AVALIACAO,OBSERVACAO
+educacao,Quais propostas aparecem nos trechos recuperados sobre educação pública?,Não há evidência suficiente nas fontes recuperadas.,HERTZ DIAS|PSTU|12 || SAMARA|UP|27 || RONALDO CAIADO|PSD|34,,,,,
+saude,Quais propostas aparecem nos trechos recuperados sobre saúde pública e SUS?,"Aqui estão as propostas relacionadas à saúde pública e SUS:
+
+* Fortalecimento e Unificação do SUS 100% Estatal: Fim da entrega da gestão hospitalar a Organizações Sociais (OSs), fundações privadas e cooperativas empresariais. Toda a rede sanitária deve ser de gestão direta e pública. Fim da exploração dos planos de saúde privados.
+* Soberania Farmacêutica e Produção Nacional de Remédios: Fortalecimento dos laboratórios oficiais do Estado para a fabricação massiva de medicamentos, vacinas, equipamentos e insumos, para serem distribuídos gratuitamente à população.
+* Valorização dos Trabalhadores da Saúde: Concursos públicos com regime estatutário, fim da precarização e aplicação integral dos pisos salariais nacionais das categorias.
+* Garantia de Saúde Pública e Gratuita para Todos; Fim do Lucro na Educação.
+
+Essas propostas buscam fortalecer e unificar o SUS, garantir a soberania farmacêutica e produção nacional de remédios, valorizar os trabalhadores da saúde e garantir a educação pública e gratuita para todos.",SAMARA|UP|23 || SAMARA|UP|22 || SAMARA|UP|24,,,,,
+seguranca,Quais propostas aparecem nos trechos recuperados sobre segurança pública e combate ao crime?,"Aqui estão as propostas relacionadas à segurança pública e combate ao crime de cada candidato:
+
+**LULA (PT)**
+
+* Proposta de emenda constitucional para revisar as atribuições dos entes da Federação na área de segurança pública.
+* Aprofundar a cooperação entre as instituições dos três níveis de governo.
+* Ampliar o escopo de ação do Poder Federal para combater a violência.
+* Fortalecer o Programa Brasil Contra o Crime Organizado.
+* Apoiar estados e municípios para retomar territórios dominados pelo crime organizado.
+* Consolidar o Sistema de Inteligência de Segurança Pública e Justiça Criminal.
+* Manter uma política de controle de armas e munições.
+* Fortalecer o sistema prisional para reduzir a reincidência e garantir direitos.
+
+**ROMEU ZEMA (NOVO)**
+
+* Classificar facções criminosas como organizações terroristas.
+* Empregar as Forças Armadas de forma integrada às polícias para retomar territórios dominados pelo crime organizado.
+* Construir presídios de segurança máxima para confinamento de faccionados.
+* Utilizar imóveis e terrenos da União ociosos ou subutilizados para habitação popular.
+* Apoiar estados e municípios no uso dos instrumentos constitucionais e urbanísticos destinados a fazer cumprir a função social da propriedade.
+* Priorizar a política de moradia focada na desapropriação da grande propriedade.
+* Financiar drenagem, contenção de encostas, parques lineares, recuperação de rios, reassentamento de áreas de risco e adaptação climática urbana.
+* Integrar habitação, mobilidade, saneamento, meio ambiente, emprego, cultura, educação e saúde no planejamento urbano.
+
+**SAMARA (UP)**
+
+* Não há informações explicitas sobre segurança pública e combate ao crime.",LULA|PT|16 || ZEMA|NOVO|1 || SAMARA|UP|57,,,,,
+trabalho,Quais propostas aparecem nos trechos recuperados sobre emprego e trabalho?,"Aqui estão as propostas relacionadas ao emprego e trabalho:
+
+* SAMARA (UP):
+ + Criação de Frentes Emergenciais de Trabalho
+ + Empregos públicos com contratações diretas
+ + Nacional de construção de moradias populares
+ + Saneamento
+ + Creches
+ + Postos de saúde e infraestrutura nas periferias e no interior
+ + Valorização do salário mínimo
+ + Criação de um plano nacional de obras de infraestrutura, moradia, saneamento básico, creches e postos de saúde
+* LULA (PT):
+ + Valorização do trabalho em todas as suas formas
+ + Assegurar direitos às trabalhadoras e aos trabalhadores
+ + Prepare as pessoas para as transformações tecnológicas
+ + Fortalecer o empreendedorismo, o cooperativismo e a economia solidária
+ + Retomada do crescimento, do investimento em infraestrutura, da política industrial e a oferta de linhas de crédito adequadas
+ + Criação de um programa de valorização do salário mínimo
+ + Expansão da proteção trabalhista
+ + Combate à pejotização espúria
+* ZEMA (NOVO):
+ + Reduzir os custos de contratar para retirar os brasileiros da informalidade
+ + Reduzir burocracias, encargos e contribuições sobre a folha de pagamento
+ + Qualificar a mão de obra para o mercado de trabalho
+ + Direcionar o ensino técnico e profissionalizante para as demandas e oportunidades reais do mercado de trabalho
+ + Ampliar a liberdade de trabalho
+ + Acabar com as reservas de mercado corporativistas
+ + Garantir aos indígenas o direito de trabalhar e prosperar com o seu trabalho
+ + Investimento em infraestrutura e saneamento",SAMARA|UP|10 || LULA|PT|50 || ZEMA|NOVO|14,,,,,
+meio_ambiente,Quais propostas aparecem nos trechos recuperados sobre meio ambiente e mudanças climáticas?,"Aqui estão as propostas relacionadas ao meio ambiente e mudanças climáticas:
+
+**EDMILSON COSTA (PCB)**
+
+* Desenvolver uma política radical de combate à destruição da natureza promovida pelo capitalismo.
+* Aumentar a malha ferroviária e hidroviária para contribuir com o custeio do meio ambiente.
+* Implementar o transporte público 24 horas nas médias e grandes cidades.
+* Promover a expansão da malha metro-ferroviária de transporte de passageiros e cargas por todo o país.
+* Estabelecer restrições crescentes à produção e ao consumo de produtos descartáveis de plástico.
+* Expandidas as reservas florestais e as áreas de proteção ambiental atuais.
+* Operar a implantação de taxação sobre emissões de gases poluentes e sobre outros danos ambientais.
+* Reativar e reforçar os órgãos de fiscalização e controle ambiental.
+
+**SAMARA (UP)**
+
+* Proibir a destruição de florestas.
+* Estabelecer controle popular sobre a Amazônia e expulsar todos os monopólios estrangeiros da região.
+* Demarcar e posse imediata das terras indígenas e quilombolas.
+* Implementar ações de reflorestamento, fortalecimento e ampliação da coleta e do reaproveitamento de resíduos sólidos.
+* Promover a integração das políticas ambientais com as políticas industrial, de energia, de ciência e tecnologia, de educação, de agropecuária, de comércio exterior, de cidades e outras.
+* Reduzir as emissões de gases do efeito estufa, combater ao desmatamento, promover ações de reflorestamento, fortalecimento e ampliação da coleta e do reaproveitamento de resíduos sólidos.
+
+**RONALDO CAIADO (PSD)**
+
+* Implementar licenciamento por risco, prazo e objetividade.
+* Criar um governo ambiental digital e inteligência geoespacial.
+* Acelerar a análise e validação do Código Florestal.
+* Implementar um mercado de carbono de alta integridade.
+* Remunerar a conservação de água, solo, biodiversidade e carbono.
+* Apoiar a bioeconomia com valor no território.
+* Fortalecer a fiscalização e inteligência financeira para combater ao desmatamento, grilagem e crimes ambientais.
+* Implementar um sistema nacional integrado de risco para combater incêndios.",EDMILSON COSTA|PCB|8 || SAMARA|UP|75 || RONALDO CAIADO|PSD|55,,,,,
+moradia,Quais propostas aparecem nos trechos recuperados sobre habitação e moradia?,"Aqui estão as propostas relacionadas à habitação e moradia apresentadas pelos candidatos Veterinário Wilson Grassi e Samara:
+
+**Veterinário Wilson Grassi (DEMOCRATA)**
+
+* Proposta 10.1: Portabilidade do aluguel para financiamento
+ + Reconhecer o histórico de pagamento de aluguel como comprovação de capacidade de pagamento
+ + Direito ao financiamento com parcela inicial equivalente ao valor do aluguel comprovado
+ + Análise automatizada com resposta em prazo fixado e negativa fundamentada e recorrível
+* Proposta 10.2: Juros baixos de verdade
+ + Direcionamento dos recursos do FGTS e do Sistema Brasileiro de Poupança e Empréstimo para a faixa de renda que hoje não acessa financiamento
+ + Redução do custo de originação por meio da automatização da análise, do cartório eletrônico e da eliminação de exigência documental duplicada
+ + Garantia pública parcial para o financiamento de quem tem histórico de aluguel e não tem entrada
+* Proposta 10.3: Regularização fundiária e o que já está construído
+ + Titulação em massa em áreas consolidadas com procedimento simplificado
+ + Prioridade para requalificação e ocupação de área urbana com infraestrutura já instalada
+ + Assistência técnica pública gratuita para reforma e ampliação
+* Proposta 10.4: A meta, e como ela será cobrada
+ + Redução do déficit habitacional medido pela metodologia da Fundação João Pinheiro
+ + Alteração da legislação do Sistema Financeiro da Habitação e do FGTS
+ + Regulamentação do cadastro público de locação
+ + Lei orçamentária para o subsídio
+ + Ato do Conselho Curador do FGTS
+
+**Samara (UP)**
+
+* Proposta: Reforma Urbana
+ + Ampliar massivamente a produção pública e social de moradias, priorizando famílias de baixa renda, mulheres chefes de família, pessoas com deficiência, idosos e população em situação de rua
+ + Fortalecer programas de urbanização de favelas, regularização fundiária de interesse social, saneamento, drenagem, iluminação, equipamentos públicos e mobilidade
+ + Utilizar imóveis e terrenos da União ociosos ou subutilizados para habitação popular e equipamentos públicos
+ + Apoiar estados e municípios na implementação da Reforma Urbana",VETERINÁRIO WILSON GRASSI|DEMOCRATA|30 || VETERINÁRIO WILSON GRASSI|DEMOCRATA|31 || SAMARA|UP|56,,,,,
+infraestrutura,Quais propostas aparecem nos trechos recuperados sobre infraestrutura e transporte público?,"Aqui estão as propostas relacionadas a infraestrutura e transporte público:
+
+* Ronaldo Caiado (PSD):
+ + Retomar investimentos em corredores estruturais, BRT, VLT, trens metropolitanos, metrôs e integração ferroviária.
+ + Apoiar estudos, desapropriações, licenciamento, engenharia e operação para que projetos não parem após o anúncio.
+ + Priorizar rotas escolares, áreas de grande circulação e acesso de idosos, crianças e pessoas com deficiência.
+ + Adotar metas de redução de mortes e lesões graves, tratamento de pontos críticos, fiscalização baseada em risco, desenho seguro de vias e integração com saúde e educação.
+ + Integrar planos de mobilidade, uso do solo, habitação e desenvolvimento econômico.
+* Zema (NOVO):
+ + Elaborar um portfólio robusto de projetos nos mais diferentes setores, com crono-grama previsível de oportunidades de investimentos.
+ + Reduzir a dependência dos bancos públicos federais e multilaterais nas etapas de estruturação e financiamento dos projetos.
+ + Simplificar o processo de licenciamento conforme a nova Lei Geral do Licenciamento Ambiental.
+ + Fortalecer a coordenação entre reguladores e órgãos de controle.
+ + Reunificar o Ministério da Infraestrutura.
+ + Fortalecer a Agência Nacional de Águas e Saneamento Básico (ANA) como agência reguladora.
+ + Ampliar e modernizar a malha ferroviária nacional.
+ + Expandir a capacidade e aumentar a eficiência do sistema portuário nacional.
+ + Modernizar a gestão da infraestrutura rodoviária nacional.
+ + Fortalecer a mobilidade urbana como política nacional de infraestrutura.",RONALDO CAIADO|PSD|61 || ZEMA|NOVO|15 || ZEMA|NOVO|17,,,,,
+mulheres,Quais propostas aparecem nos trechos recuperados sobre políticas para mulheres?,"Aqui estão as propostas relacionadas às políticas para mulheres apresentadas nas fontes:
+
+* Ronaldo Caiado (PSD):
+ + Pacto Nacional pelo Fim do Feminicídio: estabelecer metas, protocolo de risco, integração de dados e responsabilidades de União, estados e municípios para combater o feminicídio.
+ + Medida protetiva cumprida e monitorada: criar interoperabilidade nacional para medidas protetivas, cadastro de risco e alertas para proteger as vítimas de violência.
+ + Investigação e julgamento prioritários: adotar protocolo nacional de feminicídio, estupro e violência sexual, fortalecer perícia e Salas Lilás para reduzir revitimização.
+ + Reparação patrimonial e proteção econômica: aprimorar bloqueio judicial, indenização, alimentos e destinação de bens do condenado às vítimas e filhos, dentro do devido processo.
+ + Casas de acolhimento e atendimento único: expandir rede regional de acolhimento sigiloso e centros integrados com atendimento policial, jurídico, psicossocial e de saúde.
+* Hertz Dias (PSTU):
+ + Creches e escolas públicas gratuitas e em tempo integral para todas as crianças como condição para a independência das mulheres.
+ + Redução da jornada de trabalho sem redução salarial como medida para enfrentar a dupla jornada e garantir qualidade de vida.
+ + Educação sexual para decidir, contraceptivo para não engravidar, aborto legal e seguro para não morrer.
+ + Garantia de condições materiais para quem deseja maternar.
+ + Fim de toda forma de controle sobre o corpo das mulheres.
+* Ronaldo Caiado (PSD):
+ + Proteção no trabalho e combate ao assédio: fortalecer canais, inspeção, protocolos e responsabilização por assédio e violência, incluindo trabalho doméstico, rural e plataformas.
+ + Participação política sem violência: combater violência política de gênero e ataques coordenados, garantir investigação e segurança e fortalecer formação de candidatas e lideranças.
+ + Dados e orçamento para mulheres: identificar impacto de políticas e gastos sobre mulheres e publicar indicadores de segurança, saúde, trabalho e cuidado.
+ + Proteção social: organizar a proteção social para acolher quem enfrenta pobreza, fome, violência, deficiência, velhice desassistida ou perda de renda e, ao mesmo tempo, construir caminhos de autonomia.",RONALDO CAIADO|PSD|62 || HERTZ DIAS|PSTU|22 || RONALDO CAIADO|PSD|64,,,,,

@@ -1,0 +1,9 @@
+{
+    "embedding_model": "qwen3-embedding:0.6b",
+    "embedding_dimension": 1024,
+    "chunk_size_words": 500,
+    "chunk_overlap_words": 75,
+    "num_chunks": 598,
+    "num_documents": 12,
+    "batch_size": 8
+}

@@ -3,3 +3,5 @@ requests
 jupyter
 matplotlib
 pypdf
+scikit-learn
+nltk

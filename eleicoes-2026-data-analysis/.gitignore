@@ -23,3 +23,11 @@ data/raw/
 # Temporary files
 *.log
 *.tmp
+
+# Generated embedding artifacts
+data/processed/government_plans/embeddings/*.npy
+data/processed/government_plans/embeddings/chunks_metadata.csv
+data/processed/government_plans/embeddings/rag_evaluation_with_sources_*.txt
+
+# Baseline embedding artifacts
+data/processed/government_plans/embeddings_baseline_1000_150/
