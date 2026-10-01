@@ -1,257 +1,221 @@
-# Eleições 2026 — Análise de Dados
+# Eleições 2026 — Data Analysis + GenAI
 
-Projeto de análise das candidaturas à Presidência da República nas Eleições 2026 utilizando dados públicos disponibilizados pelo Tribunal Superior Eleitoral (TSE).
+Neste projeto, analisei dados das candidaturas à Presidência da República nas Eleições 2026 utilizando dados públicos do Tribunal Superior Eleitoral (TSE).
 
-O objetivo é construir um pipeline reproduzível de dados eleitorais, partindo da ingestão e tratamento dos dados oficiais até análises exploratórias e, em etapas posteriores, técnicas de NLP e Large Language Models (LLMs) aplicadas aos planos de governo.
+Além da análise dos dados estruturados, explorei os planos de governo utilizando **NLP, embeddings e RAG**, com o objetivo de construir um pipeline capaz de recuperar informações diretamente dos documentos oficiais.
 
-## Objetivos
+O projeto tem caráter exclusivamente analítico e descritivo. As análises não representam avaliação ou recomendação de candidaturas, partidos ou propostas.
 
-O projeto busca explorar diferentes dimensões das candidaturas presidenciais por meio de dados oficiais, incluindo:
+## O que eu quis explorar
+
+Dividi o projeto em duas frentes.
+
+Na primeira, trabalhei com os dados estruturados do TSE para analisar:
 
 - perfil das candidaturas;
-- características demográficas e profissionais;
+- idade, escolaridade e outras características;
 - bens declarados à Justiça Eleitoral;
-- dados relacionados às campanhas;
-- análise textual dos planos de governo;
-- aplicação de NLP, embeddings e LLMs em documentos eleitorais.
+- qualidade e consistência dos dados.
 
-O projeto possui caráter exclusivamente analítico e descritivo.
+Na segunda, trabalhei com os planos de governo para explorar:
 
-## Fonte dos dados
+- extração de texto de PDFs;
+- TF-IDF e análise lexical;
+- similaridade entre documentos;
+- embeddings;
+- busca semântica;
+- RAG com modelos locais;
+- avaliação de retrieval e grounding.
 
-Os dados são obtidos do Portal de Dados Abertos do Tribunal Superior Eleitoral (TSE).
+## Como construí
 
-Nesta etapa são utilizadas principalmente as bases:
+O pipeline ficou dividido desta forma:
 
-- candidatos;
-- informações complementares das candidaturas;
-- bens declarados pelos candidatos.
-
-Os arquivos originais são obtidos diretamente das fontes oficiais durante o processo de ingestão e não são versionados neste repositório.
-
-## Universo da análise
-
-A análise principal considera somente candidaturas à Presidência cujo campo:
-
-`DS_SITUACAO_JULGAMENTO == "DEFERIDO"`
-
-no snapshot dos dados utilizado.
-
-Registros pendentes, indeferidos ou substituídos são preservados durante o processamento para fins de rastreabilidade, mas não fazem parte do universo analítico principal.
-
-Como os dados eleitorais podem sofrer atualizações, os resultados representam o estado da base oficial no momento de sua coleta.
-
-## Pipeline
-
-O fluxo atual do projeto é:
-
-```text
-Portal de Dados Abertos do TSE
-            |
-            v
-        Ingestão
-            |
-            v
-     Dados brutos
-            |
-            v
- Processamento e validação
-            |
-            v
-   Dados processados
-            |
-            v
- Análise exploratória (EDA)
-            |
-            v
-      Visualizações
+```text id="9u9a8c"
+TSE Open Data
+     |
+     +--------------------+
+     |                    |
+     v                    v
+Candidaturas       Planos de governo
+     |                    |
+     v                    v
+Processamento          pypdf
+     |                    |
+     v                    v
+    EDA              Corpus textual
+                          |
+                 +--------+--------+
+                 |                 |
+                 v                 v
+              TF-IDF            Chunking
+                 |              500 / 75
+                 v                 |
+        Similaridade lexical       v
+                         qwen3-embedding:0.6b
+                                   |
+                                   v
+                           Busca semântica
+                                   |
+                                Top-k 3
+                                   |
+                                   v
+                              Gemma 3 4B
+                                   |
+                                   v
+                            Resposta + fontes
 ```
 
-As próximas etapas expandirão o pipeline para análise textual dos planos de governo.
+Considerei no universo principal as candidaturas à Presidência com:
+
+```text id="fmppio"
+DS_SITUACAO_JULGAMENTO == "DEFERIDO"
+```
+
+no snapshot utilizado.
+
+Ao todo, trabalhei com **12 candidaturas deferidas e 12 planos de governo**, totalizando 788 páginas de documentos.
+
+## O que encontrei nos dados
+
+Na análise dos dados estruturados:
+
+- 12 candidaturas possuíam registro deferido;
+- 11 possuíam registros de bens declarados;
+- analisei 138 registros individuais de bens;
+- a idade média na data da posse era de aproximadamente 59,2 anos;
+- 10 das 12 candidaturas possuíam ensino superior completo registrado.
+
+Os valores patrimoniais utilizados representam **bens declarados ao TSE** e não uma estimativa independente de patrimônio líquido ou riqueza.
+
+## Dos PDFs à busca semântica
+
+Comecei extraindo o texto dos planos de governo com `pypdf`.
+
+Para ter um baseline interpretável, utilizei **TF-IDF** para identificar termos relevantes e medir similaridade lexical entre os documentos.
+
+Depois, parti para embeddings e busca semântica.
+
+Minha primeira configuração utilizava:
+
+```text id="8qcwya"
+1000 palavras por chunk
+overlap de 150 palavras
+```
+
+Nos testes, percebi que chunks grandes podiam misturar assuntos diferentes. Por isso, testei uma segunda configuração:
+
+```text id="9f8xqp"
+500 palavras por chunk
+overlap de 75 palavras
+```
+
+## Como avaliei o retrieval
+
+Em vez de olhar apenas para os scores de similaridade, montei oito consultas sobre temas como educação, saúde, segurança, trabalho, meio ambiente, moradia, infraestrutura e políticas para mulheres.
+
+Avaliei manualmente os cinco primeiros resultados de cada consulta.
+
+| Chunking | Chunks | Resultados relevantes | Precision@5 |
+|---|---:|---:|---:|
+| 1000 / 150 | 302 | 39/40 | 0.975 |
+| **500 / 75** | **598** | **40/40** | **1.000** |
+
+Com base nesse experimento, mantive `500/75` na configuração final.
+
+O `Precision@5 = 1.000` se refere somente às oito consultas e aos 40 resultados avaliados manualmente. Não significa que o retrieval terá desempenho perfeito para qualquer consulta.
+
+## E o RAG?
+
+Com o retrieval funcionando, utilizei os chunks recuperados como contexto para um modelo de linguagem.
+
+Comparei dois modelos locais nas mesmas oito consultas:
+
+- Llama 3.2 3B;
+- Gemma 3 4B.
+
+Avaliei quatro critérios separadamente:
+
+| Critério | Llama 3.2 3B | Gemma 3 4B |
+|---|---:|---:|
+| Grounding | 50.0% | 87.5% |
+| Citação das fontes | 0.0% | 100% |
+| Português | 100% | 100% |
+| Sem avaliação/ranking | 100% | 100% |
+
+Esses números representam **taxas de conformidade nos oito casos avaliados manualmente**, e não acurácia geral dos modelos.
+
+O resultado que mais me chamou atenção foi que **ter uma citação não garante grounding**.
+
+Em um dos testes, o Gemma citou corretamente a fonte, mas alterou o sentido de uma informação sobre habitação. Isso reforçou a importância de avaliar fidelidade ao documento separadamente da simples presença de citações.
+
+Para a configuração final do experimento, mantive:
+
+```text id="w12ytc"
+Chunking: 500 palavras / overlap 75
+Embedding: qwen3-embedding:0.6b
+Retrieval: cosine similarity
+Top-k: 3
+LLM: Gemma 3 4B
+```
 
 ## Estrutura do projeto
 
-```text
+```text id="qgcd6e"
 eleicoes-2026-data-analysis/
-|
 ├── data/
-│   ├── raw/
-│   └── processed/
-|
 ├── notebooks/
-│   └── 01_eda_candidatos.ipynb
-|
+│   ├── 01_eda_candidatos.ipynb
+│   └── 02_nlp_planos_governo.ipynb
 ├── src/
 │   ├── ingestion/
-│   │   └── tse.py
-│   └── processing/
-│       ├── candidates.py
-│       └── assets.py
-|
+│   ├── processing/
+│   └── analysis/
 ├── outputs/
-│   ├── figures/
-│   └── reports/
-|
 ├── README.md
-├── requirements.txt
-└── .gitignore
+└── requirements.txt
 ```
 
-## Processamento dos dados
-
-### Candidaturas
-
-O pipeline de candidaturas:
-
-1. carrega os dados oficiais do TSE;
-2. seleciona os registros referentes ao cargo de Presidente;
-3. combina os dados cadastrais com as informações complementares;
-4. trata códigos especiais e valores ausentes;
-5. valida duplicidades e consistência;
-6. identifica candidaturas com registro deferido;
-7. gera o dataset utilizado na análise.
-
-Os registros presidenciais completos são mantidos separadamente do dataset analítico para preservar a rastreabilidade do processamento.
-
-### Bens declarados
-
-Os bens declarados são associados às candidaturas por meio do identificador `SQ_CANDIDATO`.
-
-O processamento calcula, entre outras métricas:
-
-- quantidade de bens registrados;
-- valor total declarado;
-- valor médio dos bens;
-- valor mediano;
-- maior bem registrado.
-
-A ausência de registros de bens é mantida separada de um valor declarado igual a zero.
-
-Os valores representam bens declarados à Justiça Eleitoral e não devem ser interpretados como uma estimativa independente de patrimônio líquido ou riqueza.
-
-## Análise exploratória
-
-O notebook:
-
-`notebooks/01_eda_candidatos.ipynb`
-
-contém a primeira análise exploratória do projeto.
-
-São avaliados:
-
-- qualidade e completude dos dados;
-- idade;
-- gênero;
-- escolaridade;
-- raça/cor autodeclarada;
-- ocupação;
-- UF de nascimento;
-- distribuição dos bens declarados;
-- composição dos bens por categoria.
-
-### Alguns resultados do snapshot analisado
-
-O conjunto analítico contém 12 candidaturas com registro deferido.
-
-Entre os resultados observados:
-
-- idade média na data da posse de aproximadamente 59,2 anos;
-- mediana de idade de 59 anos;
-- 10 das 12 candidaturas possuem ensino superior completo registrado;
-- 11 candidaturas possuem registros de bens associados;
-- 138 registros individuais de bens foram analisados;
-- a distribuição dos valores declarados apresenta forte assimetria;
-- o valor mediano declarado é substancialmente inferior ao valor médio.
-
-Esses números descrevem exclusivamente o snapshot utilizado e podem mudar conforme atualizações da base oficial.
+Mantive a implementação em `src/` e utilizei os notebooks principalmente para exploração, análise e apresentação dos resultados.
 
 ## Como executar
 
-### 1. Clonar o repositório
-
-```bash
+```bash id="x3hzsc"
 git clone https://github.com/Juliocesarbs/applied-ai-projects.git
 cd applied-ai-projects/eleicoes-2026-data-analysis
-```
 
-### 2. Criar o ambiente virtual
-
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
 
-### 3. Instalar as dependências
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 4. Executar a ingestão
+Para embeddings e RAG, utilizei modelos locais com Ollama:
 
-```bash
-python src/ingestion/tse.py
+```bash id="2dl7j7"
+ollama pull qwen3-embedding:0.6b
+ollama pull gemma3:4b
 ```
 
-### 5. Processar as candidaturas
+Para explorar as análises:
 
-```bash
-python src/processing/candidates.py
-```
-
-### 6. Processar os bens
-
-```bash
-python src/processing/assets.py
-```
-
-### 7. Executar o notebook
-
-```bash
+```bash id="2fgs0v"
 jupyter notebook
 ```
 
-Abra:
+Os principais notebooks são:
 
-`notebooks/01_eda_candidatos.ipynb`
+- `01_eda_candidatos.ipynb` — análise dos dados estruturados;
+- `02_nlp_planos_governo.ipynb` — NLP, embeddings, retrieval e RAG.
 
 ## Tecnologias
 
-- Python
-- Pandas
-- Matplotlib
-- Requests
-- Jupyter Notebook
-- Git
+**Python · Pandas · Scikit-learn · NLTK · pypdf · Jupyter · Ollama · Qwen Embeddings · Gemma**
 
-## Roadmap
+## Limitações
 
-### Concluído
+Os dados representam um snapshot da base oficial do TSE e podem sofrer atualizações.
 
-- [x] Estrutura inicial do projeto
-- [x] Ingestão de dados oficiais do TSE
-- [x] Processamento das candidaturas
-- [x] Tratamento da situação de julgamento
-- [x] Processamento dos bens declarados
-- [x] Validações de qualidade
-- [x] Análise exploratória das candidaturas
-- [x] Análise inicial dos bens declarados
+TF-IDF e embeddings representam proximidade textual ou vetorial, não equivalência de propostas ou posicionamentos políticos.
 
-### Próximas etapas
-
-- [ ] Análise de dados relacionados às campanhas
-- [ ] Coleta dos planos de governo
-- [ ] Extração e preparação dos documentos
-- [ ] Análise textual com NLP
-- [ ] TF-IDF e análise de termos
-- [ ] Embeddings
-- [ ] Clusterização de temas
-- [ ] Extração estruturada com LLMs
-- [ ] Avaliação das saídas dos modelos
-- [ ] Análise comparativa dos temas presentes nos documentos
-
-## Observações
-
-Este projeto utiliza dados públicos oficiais e tem finalidade educacional e analítica.
-
-As análises não representam recomendação, avaliação ou preferência por qualquer candidatura, partido ou proposta política.
+Além disso, a avaliação de retrieval e RAG foi feita sobre um conjunto pequeno de consultas. Os resultados servem para avaliar o comportamento deste experimento e não devem ser generalizados para qualquer consulta ou modelo.
