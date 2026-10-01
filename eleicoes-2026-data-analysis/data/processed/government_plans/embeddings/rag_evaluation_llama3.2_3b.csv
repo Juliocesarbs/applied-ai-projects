@@ -1,5 +1,5 @@
 QUERY_ID,QUERY,RESPONSE,SOURCES,GROUNDED,CITACAO,PORTUGUES,SEM_AVALIACAO,OBSERVACAO
-educacao,Quais propostas aparecem nos trechos recuperados sobre educação pública?,Não há evidência suficiente nas fontes recuperadas.,HERTZ DIAS|PSTU|12 || SAMARA|UP|27 || RONALDO CAIADO|PSD|34,,,,,
+educacao,Quais propostas aparecem nos trechos recuperados sobre educação pública?,Não há evidência suficiente nas fontes recuperadas.,HERTZ DIAS|PSTU|12 || SAMARA|UP|27 || RONALDO CAIADO|PSD|34,0.0,0.0,1.0,1.0,
 saude,Quais propostas aparecem nos trechos recuperados sobre saúde pública e SUS?,"Aqui estão as propostas relacionadas à saúde pública e SUS:
 
 * Fortalecimento e Unificação do SUS 100% Estatal: Fim da entrega da gestão hospitalar a Organizações Sociais (OSs), fundações privadas e cooperativas empresariais. Toda a rede sanitária deve ser de gestão direta e pública. Fim da exploração dos planos de saúde privados.
@@ -7,7 +7,7 @@ saude,Quais propostas aparecem nos trechos recuperados sobre saúde pública e S
 * Valorização dos Trabalhadores da Saúde: Concursos públicos com regime estatutário, fim da precarização e aplicação integral dos pisos salariais nacionais das categorias.
 * Garantia de Saúde Pública e Gratuita para Todos; Fim do Lucro na Educação.
 
-Essas propostas buscam fortalecer e unificar o SUS, garantir a soberania farmacêutica e produção nacional de remédios, valorizar os trabalhadores da saúde e garantir a educação pública e gratuita para todos.",SAMARA|UP|23 || SAMARA|UP|22 || SAMARA|UP|24,,,,,
+Essas propostas buscam fortalecer e unificar o SUS, garantir a soberania farmacêutica e produção nacional de remédios, valorizar os trabalhadores da saúde e garantir a educação pública e gratuita para todos.",SAMARA|UP|23 || SAMARA|UP|22 || SAMARA|UP|24,0.0,0.0,1.0,1.0,
 seguranca,Quais propostas aparecem nos trechos recuperados sobre segurança pública e combate ao crime?,"Aqui estão as propostas relacionadas à segurança pública e combate ao crime de cada candidato:
 
 **LULA (PT)**
@@ -34,7 +34,7 @@ seguranca,Quais propostas aparecem nos trechos recuperados sobre segurança púb
 
 **SAMARA (UP)**
 
-* Não há informações explicitas sobre segurança pública e combate ao crime.",LULA|PT|16 || ZEMA|NOVO|1 || SAMARA|UP|57,,,,,
+* Não há informações explicitas sobre segurança pública e combate ao crime.",LULA|PT|16 || ZEMA|NOVO|1 || SAMARA|UP|57,0.0,0.0,1.0,1.0,
 trabalho,Quais propostas aparecem nos trechos recuperados sobre emprego e trabalho?,"Aqui estão as propostas relacionadas ao emprego e trabalho:
 
 * SAMARA (UP):
@@ -63,7 +63,7 @@ trabalho,Quais propostas aparecem nos trechos recuperados sobre emprego e trabal
  + Ampliar a liberdade de trabalho
  + Acabar com as reservas de mercado corporativistas
  + Garantir aos indígenas o direito de trabalhar e prosperar com o seu trabalho
- + Investimento em infraestrutura e saneamento",SAMARA|UP|10 || LULA|PT|50 || ZEMA|NOVO|14,,,,,
+ + Investimento em infraestrutura e saneamento",SAMARA|UP|10 || LULA|PT|50 || ZEMA|NOVO|14,1.0,0.0,1.0,1.0,
 meio_ambiente,Quais propostas aparecem nos trechos recuperados sobre meio ambiente e mudanças climáticas?,"Aqui estão as propostas relacionadas ao meio ambiente e mudanças climáticas:
 
 **EDMILSON COSTA (PCB)**
@@ -95,7 +95,7 @@ meio_ambiente,Quais propostas aparecem nos trechos recuperados sobre meio ambien
 * Remunerar a conservação de água, solo, biodiversidade e carbono.
 * Apoiar a bioeconomia com valor no território.
 * Fortalecer a fiscalização e inteligência financeira para combater ao desmatamento, grilagem e crimes ambientais.
-* Implementar um sistema nacional integrado de risco para combater incêndios.",EDMILSON COSTA|PCB|8 || SAMARA|UP|75 || RONALDO CAIADO|PSD|55,,,,,
+* Implementar um sistema nacional integrado de risco para combater incêndios.",EDMILSON COSTA|PCB|8 || SAMARA|UP|75 || RONALDO CAIADO|PSD|55,0.0,0.0,1.0,1.0,
 moradia,Quais propostas aparecem nos trechos recuperados sobre habitação e moradia?,"Aqui estão as propostas relacionadas à habitação e moradia apresentadas pelos candidatos Veterinário Wilson Grassi e Samara:
 
 **Veterinário Wilson Grassi (DEMOCRATA)**
@@ -125,7 +125,7 @@ moradia,Quais propostas aparecem nos trechos recuperados sobre habitação e mor
  + Ampliar massivamente a produção pública e social de moradias, priorizando famílias de baixa renda, mulheres chefes de família, pessoas com deficiência, idosos e população em situação de rua
  + Fortalecer programas de urbanização de favelas, regularização fundiária de interesse social, saneamento, drenagem, iluminação, equipamentos públicos e mobilidade
  + Utilizar imóveis e terrenos da União ociosos ou subutilizados para habitação popular e equipamentos públicos
- + Apoiar estados e municípios na implementação da Reforma Urbana",VETERINÁRIO WILSON GRASSI|DEMOCRATA|30 || VETERINÁRIO WILSON GRASSI|DEMOCRATA|31 || SAMARA|UP|56,,,,,
+ + Apoiar estados e municípios na implementação da Reforma Urbana",VETERINÁRIO WILSON GRASSI|DEMOCRATA|30 || VETERINÁRIO WILSON GRASSI|DEMOCRATA|31 || SAMARA|UP|56,1.0,0.0,1.0,1.0,
 infraestrutura,Quais propostas aparecem nos trechos recuperados sobre infraestrutura e transporte público?,"Aqui estão as propostas relacionadas a infraestrutura e transporte público:
 
 * Ronaldo Caiado (PSD):
@@ -144,7 +144,7 @@ infraestrutura,Quais propostas aparecem nos trechos recuperados sobre infraestru
  + Ampliar e modernizar a malha ferroviária nacional.
  + Expandir a capacidade e aumentar a eficiência do sistema portuário nacional.
  + Modernizar a gestão da infraestrutura rodoviária nacional.
- + Fortalecer a mobilidade urbana como política nacional de infraestrutura.",RONALDO CAIADO|PSD|61 || ZEMA|NOVO|15 || ZEMA|NOVO|17,,,,,
+ + Fortalecer a mobilidade urbana como política nacional de infraestrutura.",RONALDO CAIADO|PSD|61 || ZEMA|NOVO|15 || ZEMA|NOVO|17,1.0,0.0,1.0,1.0,
 mulheres,Quais propostas aparecem nos trechos recuperados sobre políticas para mulheres?,"Aqui estão as propostas relacionadas às políticas para mulheres apresentadas nas fontes:
 
 * Ronaldo Caiado (PSD):
@@ -163,4 +163,4 @@ mulheres,Quais propostas aparecem nos trechos recuperados sobre políticas para 
  + Proteção no trabalho e combate ao assédio: fortalecer canais, inspeção, protocolos e responsabilização por assédio e violência, incluindo trabalho doméstico, rural e plataformas.
  + Participação política sem violência: combater violência política de gênero e ataques coordenados, garantir investigação e segurança e fortalecer formação de candidatas e lideranças.
  + Dados e orçamento para mulheres: identificar impacto de políticas e gastos sobre mulheres e publicar indicadores de segurança, saúde, trabalho e cuidado.
- + Proteção social: organizar a proteção social para acolher quem enfrenta pobreza, fome, violência, deficiência, velhice desassistida ou perda de renda e, ao mesmo tempo, construir caminhos de autonomia.",RONALDO CAIADO|PSD|62 || HERTZ DIAS|PSTU|22 || RONALDO CAIADO|PSD|64,,,,,
+ + Proteção social: organizar a proteção social para acolher quem enfrenta pobreza, fome, violência, deficiência, velhice desassistida ou perda de renda e, ao mesmo tempo, construir caminhos de autonomia.",RONALDO CAIADO|PSD|62 || HERTZ DIAS|PSTU|22 || RONALDO CAIADO|PSD|64,1.0,0.0,1.0,1.0,
